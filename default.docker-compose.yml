@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  mastodon-siren:
+    container_name: mastodon-siren
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SERVER=https://botsin.space
+      - CLIENT_ID=7aclwX_trtCdJd9cY-KdSurKoOLVSYj9Qjp6tJe24gw
+      - CLIENT_SECRET=nQ9DGF6dzi8II6TWmhTvvATNlPW0kvgq4JbIUCSN7Z4
+      - ACCESS_TOKEN=GKGs1AIFacFbOUDyuh-D7k8uZ8QRLEMA0THNynOWtj4
+      - POST_TEXT=Tuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+      - TZ=Europe/Prague
+      - CRON_SCHEDULE=* * * * *
+    restart: unless-stopped
